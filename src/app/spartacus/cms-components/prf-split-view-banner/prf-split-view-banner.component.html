@@ -1,0 +1,9 @@
+<ng-container *ngIf="data$ | async as data">
+  <div class="container">
+    <div class="headline">
+      <h1 *ngIf="data.title">{{ data.title }}</h1>
+      <p *ngIf="data.content">{{ data.content }}</p>
+    </div>
+    <cx-media [container]="data.media"></cx-media>
+  </div>
+</ng-container>

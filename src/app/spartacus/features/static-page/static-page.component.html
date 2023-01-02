@@ -1,0 +1,11 @@
+<p>static-page works!</p>
+<a routerLink="/electronics/cameras/digital-compacts/HP/300938/photosmart-e317-digital-camera">Static Link</a>
+<br />
+<a
+  [routerLink]="
+    { cxRoute: 'product', params: { code: '300938', nameForUrl: 'photosmart-e317-digital-camera' } } | cxUrl
+  "
+  >Static Link</a
+>
+<br />
+<button (click)="goToRandomProduct()">Go to url</button>

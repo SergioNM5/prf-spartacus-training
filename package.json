@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --ssl",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -11,7 +11,8 @@
     "serve:ssr": "node dist/perficientcommerce/server/main.js",
     "build:ssr": "ng build && ng run perficientcommerce:server",
     "prerender": "ng run perficientcommerce:prerender",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "generate:sprite": "svg-sprite-generate -d src/assets/svg -o src/assets/icons/icons-sprite.svg"
   },
   "private": true,
   "dependencies": {
@@ -82,6 +83,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "prettier": "2.7.1",
+    "svg-sprite-generator": "^0.0.7",
     "typescript": "~4.3.5"
   }
 }
